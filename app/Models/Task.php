@@ -14,4 +14,8 @@ class Task extends Model
     foreach ($user->tasks as $task) {
     echo $task->name;
 }
+   public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
