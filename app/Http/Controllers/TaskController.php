@@ -21,5 +21,11 @@ class TaskController extends Controller
     ]);
 
     // Create The Task...
+	
+	$request->user()->tasks()->create([
+        'name' => $request->name,
+    ]);
+
+    return redirect('/tasks');
 }
 }
